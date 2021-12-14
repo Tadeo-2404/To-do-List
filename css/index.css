@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul: #1e96fc;
+    --azulFuerte:#072ac8;
+    --amarillo: #ffbc42;
+    --gris:#c0c0c0 ;
+    --blanco: #e7ecef;
+    --rojo:#dd1c1a ;
+}
+
+body {
+    background-color: var(--azul);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 80rem;
+}
+.section-form {
+    background-color: var(--amarillo);
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.form-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.textarea {
+    padding: 0.5rem;
+    font-size: 2rem;
+    width: 80rem;
+    height: 4rem;
+    border-style: none;
+}
+
+.btn {
+    font-size: 2rem;
+    padding: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: var(--azulFuerte);
+    color: var(--blanco);
+    border-style: none;
+    text-transform: uppercase;
+}
+
+
+.section-output {
+    background-color: var(--blanco);
+    width: 100%;
+}
+
+
+.task {
+    display: flex;
+    padding: 1rem;
+    font-size: 2rem;
+    margin-left: 2rem;
+    justify-content: space-between;
+}
+
+
+.task-container {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+}
+
+.icon-x {
+    justify-self: end;
+}
+
+.task-container:nth-of-type(even) {
+    background-color: gray;
+    color: white;
+}
+
+.mensajeError {
+   background-color: var(--rojo);
+   color: var(--blanco);
+   padding: 2rem;
+   font-size: 2rem;
+   margin-top: 2rem;
+   margin-bottom: 1rem;
+}
+.contornoError {
+    border: solid 4px var(--rojo);
+}
+
+
+.check {
+    margin-left: 1rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.icon-x {
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.display {
+    opacity: 0;
+}
+.tachar-texto {
+    text-decoration: line-through;
+}
+
+.destachar-texto {
+    text-decoration: none;
+}
+
+/*MQ*/
+@media (max-width: 768px) {
+     .container {
+         min-width: 0;
+         width: 100%;
+     }
+     .textarea {
+         width: 100%;
+     }
+
+}
